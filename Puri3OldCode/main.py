@@ -20,7 +20,7 @@ mqtt = c.iotMQTT()
 
 #IOT Data Uploading
 def doFeed():
-    threading.Timer(1.0,doFeed).start()
+    threading.Timer(5.0,doFeed).start()
     with open('./a1.json') as json_file:
         data = json.load(json_file)
     with open('./config.json') as json_file:
@@ -56,7 +56,7 @@ def doFeed():
 
 sleep(.6)
 
-threading.Timer(1.0,doFeed).start()
+threading.Timer(5.0,doFeed).start()
 
 def anotherFunction():
     broker_address = "4.240.114.7"
