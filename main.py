@@ -31,7 +31,7 @@ def doFeed():
     now = datetime.now()
     date_tm = now.strftime("%Y-%m-%d %H:%M:%S")
     randNum = uniform(1.0,2.0)
-    randNum2 = uniform(2.0,4.0)
+    randNum2 = uniform(1.0,2.0)
 
     if did['deviceCommuncationId'][0]=="661526019560586":
         mqtt.postDataFeed({"dataPoint": date_tm, "paramType": 'Sensor1', "paramValue": randNum},"661526019560586") 
